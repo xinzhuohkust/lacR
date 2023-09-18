@@ -1,11 +1,11 @@
 Package: lacR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A Chinese tokenizer based on Baidu LAC (Lexical Analysis of Chinese).
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Xinzhuo HUANG
+Maintainer: Xinzhuo HUANG <xhuangcb@connect.ust.hk>
+Description: A Chinese tokenizer based on LAC, supporting Chinese word segmentation, multiple part-of-speech tagging, vetorization, and equipped with a progress bar functionality.
+License: MIT
 Encoding: UTF-8
 LazyData: true
+

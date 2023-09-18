@@ -8,15 +8,29 @@ getGlobal <- function(name) {
   get(name, envir = LAC_env)
 }
 
-setup_lac <- function(custom = FALSE, location = NULL) {
+setup_lac <- function(custom = FALSE, location = NULL, python = NULL) {
 
-  reticulate::virtualenv_create(envname = "python3_env")
+  system("cmd.exe /c where python", intern = TRUE) |>
+    purrr::map_chr(~ paste("Found the following Python installations:", ., "\n")) |>
+    message()
 
-  reticulate::virtualenv_install("python3_env", packages = c("lac"))
+  if (is.null(python)) {
+    reticulate::conda_create("condaenv_for_python2r", python_version = "3.11")
 
-  reticulate::use_virtualenv("python3_env", required = T)
+    reticulate::conda_install("condaenv_for_python2r", packages = c("lac"), pip = TRUE)
 
-  LAC <- reticulate::import("LAC")
+    reticulate::use_condaenv("condaenv_for_python2r", required = TRUE)
+
+    LAC <- reticulate::import("LAC")
+  } else {
+    reticulate::virtualenv_create("virenv_for_python2r", python = python)
+
+    reticulate::virtualenv_install("virenv_for_python2r", packages = c("lac"))
+
+    reticulate::use_virtualenv("virenv_for_python2r", required = TRUE)
+
+    LAC <- reticulate::import(module = "LAC")
+  }
 
   if (custom == FALSE & !is.null(location)) {
     stop("location is ignored unless custom is TRUE")
@@ -44,5 +58,3 @@ setup_lac <- function(custom = FALSE, location = NULL) {
     }
   }
 }
-
-

@@ -6,7 +6,7 @@ To set up a virtual environment and import \emph{lac (python version)} into R.
 \description{
 This function can automatically set up a virtual environment, download the lac module, and allow you to specify whether a custom dictionary is needed.
 
-If you do not specify the location of Python, a conda virtual environment wil be created by default, based on Python version \emph{3.1.1}. You, can, however, specify the location of Python in your machine, and a virtual environment will be created based on that specific Python. Please be aware that the performance and compatibility of your virtual environment might be affected by the Python version you choose.
+If you do not specify the location of Python, a conda virtual environment wil be created by default, based on Python version \emph{3.11}. You, can, however, specify the location of Python in your machine, and a virtual environment will be created based on that specific Python. Please be aware that the performance and compatibility of your virtual environment might be affected by the Python version you choose.
 }
 \usage{
 setup_lac(custom = FLASE, location = "custom.txt")

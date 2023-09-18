@@ -10,7 +10,7 @@ getGlobal <- function(name) {
 
 setup_lac <- function(custom = FALSE, location = NULL) {
 
-  reticulate::virtualenv_create(envname = "python3_env", python = "3.8")
+  reticulate::virtualenv_create(envname = "python3_env")
 
   reticulate::virtualenv_install("python3_env", packages = c("lac"))
 

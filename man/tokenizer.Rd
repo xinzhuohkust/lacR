@@ -1,7 +1,7 @@
 \name{tokenizer}
 \alias{tokenizer}
 \title{
-A Chinese tokenizer based on Baidu LAC (Lexical Analysis of Chinese).
+A Chinese tokenizer based on the \emph{Baidu LAC (Lexical Analysis of Chinese)}.
 }
 \description{
 A Chinese tokenizer based on LAC, supporting Chinese word segmentation, multiple part-of-speech tagging, vetorization, and equipped with a progress bar functionality.
@@ -13,9 +13,9 @@ tokenizer(string, analysis = FALSE, progress = TRUE, min = 0)
 \item{string}{A character vector awaits segmentation.}
 \item{progress}{A logical value to specify whether to display a progress bar, default is TRUE.}
 \item{min}{A numeric value to set a minimum length for words to be retained, default is 0.}
-\item{analysis}{A logical value to specify whether to perform part-of-speech tagging, default is FALSE.
-
-Part-of-Speech and Named Entity Categories:
+\item{analysis}{A logical value to specify whether to perform part-of-speech tagging, default is FALSE.}
+\seealso{
+Part-of-speech and Named entity categories:
 \describe{
   \item{n}{General noun}
   \item{f}{Directional noun}
@@ -42,7 +42,7 @@ Part-of-Speech and Named Entity Categories:
   \item{ORG}{Organization name}
   \item{TIME}{Time expression}
 }
-}
+
 \details{
   For more information on LAC, please visit the \link{https://github.com/baidu/lac}.
 }

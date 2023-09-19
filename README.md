@@ -6,7 +6,10 @@ Author: *Xinzhuo Huang*
 
 Version: 0.1.0
 
-Compared to other Chinese word segmentation schemes, LAC performs rather well in entity information extraction, particularly for personal names and place names. Unfortunately, due to issues with RStudio, this package cannot run within the RStudio environment, please use VS code to run R.
+Compared to other Chinese word segmentation schemes, LAC performs rather 
+well in entity information extraction, particularly for personal names and 
+place names. Unfortunately, due to issues with RStudio, this package 
+cannot run within the RStudio environment, please use VS code to run R.
 
 <br>
 <br>

@@ -2,11 +2,11 @@
 A Chinese tokenizer based on Baidu LAC (Lexical Analysis of Chinese).
 <img align='left' src="lacR.png" width="188">        
                                     
-Not supported in RStudio, please use VS Code to run R.   
-
 Author: *Xinzhuo Huang*
 
 Version: 0.1.0
+
+Compared to other Chinese word segmentation schemes, LAC performs rather well in entity information extraction, particularly for personal names and place names. Unfortunately, due to issues with RStudio, this package cannot run within the RStudio environment, please use VS code to run R.
 
 <br>
 <br>

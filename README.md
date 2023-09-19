@@ -14,9 +14,6 @@ cannot run within the RStudio environment, please use VS code to run R.
 <br>
 <br>
 <br>
-<br>
-<br>
-
 ## Install this package
 
 ```

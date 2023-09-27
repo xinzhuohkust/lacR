@@ -69,7 +69,7 @@ if (tolower(answer) == "yes") {
 } else if (tolower(answer) == "no") {
   message("Great! Let's continue.")
 
-  setup_lac <- function(custom = FALSE, location = NULL, conda = NULL) {
+  setup_lac <- function(custom = FALSE, location = NULL, conda = TRUE) {
     if (conda == TRUE) {
       if (is.null(use_conda("condaenv_for_python2r", required = TRUE)$error)) {
         message("Using the conda virtual environment `condaenv_for_python2r`")
@@ -77,7 +77,7 @@ if (tolower(answer) == "yes") {
       }
     } else {
       if (is.null(use_vir("virenv_for_python2r", required = TRUE)$error)) {
-        message("Using the conda virtual environment `condaenv_for_python2r`.")
+        message("Using the virtual environment `virenv_for_python2r`.")
         LAC <- reticulate::import(module = "LAC")
       }
     }

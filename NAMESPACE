@@ -1,2 +1,4 @@
+import(purrr)
+import(reticulate)
 export(setup_lac)
 export(tokenizer)
